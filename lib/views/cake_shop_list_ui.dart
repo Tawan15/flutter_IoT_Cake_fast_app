@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iot_cake_fast_app/models/cakeshop.dart';
+import 'package:flutter_iot_cake_fast_app/views/cake_shop_detail_ui.dart';
  
 class CakeShopListUi extends StatefulWidget {
   const CakeShopListUi({super.key});
@@ -42,7 +43,7 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
       name: 'Vista Cafe by Verasu',
       address: 'อาคารวีรสุ ถนนวิทยุ',
       phone: '022548100',
-      image1: 's21.jpg',
+      image1: 's21.jpg',                                             
       image2: 's22.jpg',
       image3: 's23.jpg',
       description:
@@ -139,6 +140,7 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
           'สายด่วนกินเค้ก',
           style: TextStyle(
             color: Colors.white,
+            fontSize: 20,
           ),
         ),
         centerTitle: true,
@@ -178,7 +180,17 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
                 },
                 itemBuilder: (context, index) {
                   return ListTile(
-                    onTap: (){},
+                    onTap: (){
+                      //เปิดหน้าแสดงรายละเอียดร้านเค้ก แบบย้อนกลับได้
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CakeShopDetailUi(
+                            cakeShopDetail: cakeShops[index], //ส่งข้อมูลร้านเค้กที่ถูกกดไปยังหน้า CakeShopDetailUi
+                          ),
+                        ),
+                      ); 
+                    },
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
                       child: Image.asset(

@@ -16,6 +16,8 @@ dependencies:
   carousel_slider: ^5.1.2
   dots_indicator: ^4.0.1
   bordered_text: ^3.0.0
+  flutter_map: ^6.0.0 # ตรวจสอบเวอร์ชันล่าสุดที่ pub.dev
+  latlong2: ^0.9.0    # สำหรับจัดการค่าพิกัด ละติจูด/ลองจิจูด
 
 dev_dependencies:
   flutter_test:
