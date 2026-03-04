@@ -137,7 +137,7 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         title: Text(
-          'สายด่วนกินเค้ก',
+          'ร้านเค้กมหัศจรรย์',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
